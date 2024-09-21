@@ -50,8 +50,6 @@ with open(file_to_load) as election_data:
         candidate_votes[candidate_name] += 1
 
     
-# print to see the log
-# print(candidates_list)
 
 # Open a text file to save the output
 with open(file_to_output, "w") as txt_file:
