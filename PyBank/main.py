@@ -39,7 +39,7 @@ with open(file_to_load) as financial_data:
 
         # Track the total month and total net
         total_months += 1
-        total_net += int(first_row[1])
+        total_net += int(row[1])
         
 
         # Track the net change
@@ -77,7 +77,7 @@ date_inc = date_format.split("-")
 
 date_dec = []
 date_format = greatest_decrease[0]
-date_inc = date_format.split("-")
+date_dec = date_format.split("-")
 
 output = (
     f"Financial Analysis\n"
