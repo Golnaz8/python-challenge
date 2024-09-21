@@ -13,6 +13,7 @@ file_to_output = os.path.join("analysis", "budget_analysis.txt")  # Output file 
 total_months = 0
 total_net = 0
 # Add more variables to track other necessary financial data
+net_change_list = []
 
 # Open and read the csv
 with open(file_to_load) as financial_data:
@@ -22,18 +23,23 @@ with open(file_to_load) as financial_data:
     header = next(reader)
 
     # Extract first row to avoid appending to net_change_list
+    first_row = next(reader)
 
 
     # Track the total and net change
+    total_months += 1
+    total_net += int(first_row[1])
 
 
     # Process each row of data
     for row in reader:
 
         # Track the total
-
+        total_months += 1
+        
 
         # Track the net change
+        total_net += int(first_row[1])
 
 
         # Calculate the greatest increase in profits (month and amount)
